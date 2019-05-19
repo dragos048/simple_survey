@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div id="container" style="width: 30%; margin: auto; padding-top: 1%;">
+        {% if form_select is defined %}
+            {{ form_start(form_select) }}
+            {{ form_end(form_select) }}
+            <a href="/survey" class="btn btn-info" role="button">Back</a>
+        {% else %}
+            <a href="/survey/list" class="btn btn-info" role="button">Back</a>
+        {% endif %}
+        {% if message is not defined %}
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Country</th>
+                    <th scope="col">Information</th>
+                  </tr>
+                </thead>  
+                    <tbody>
+                       {% for survey in surveys %}
+                           <tr>
+                               <th scope="row">{{ survey.id }}</th>
+                               <td>{{ survey.name }}</td>
+                               <td>{{ survey.country }}</td>
+                               <td>{{ survey.bathShower }} | {{ survey.toiletFlush }} | {{ survey.wash }} | {{ survey.gardenWater }}</td>
+                           </tr>
+                       {% endfor %}
+                   </tbody>
+            </table>  
+        {% else %}
+            <h3>{{ message }}</h3>
+        {% endif %}
+    </div>
+{% endblock %}

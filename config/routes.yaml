@@ -1,0 +1,13 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+survey:
+    path: /survey
+    controller: SurveyBundle\Controller\SurveyController::showAction
+survey_list:
+    path: /survey/list
+    controller: SurveyBundle\Controller\SurveyController::listAction
+survey_select:
+    path: /survey/{name}
+    controller: SurveyBundle\Controller\SurveyController::selectByNameAction

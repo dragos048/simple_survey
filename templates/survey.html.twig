@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block body %} 
+    <div style="width: 30%; margin: auto; padding-top: 1%">  
+        <a href="/survey/list" class="btn btn-info" role="button">View List</a>
+        <h1>Water Survey</h1>  
+        {{ form_start(form_survey) }}
+        {{ form_end(form_survey) }}
+    </div>
+{% endblock %}

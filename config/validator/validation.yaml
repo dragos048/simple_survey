@@ -1,0 +1,10 @@
+App\SurveyBundle\Entity\SurveyEntity:
+    properties:
+        name:
+            - NotBlank: ~
+            - Type: string
+            - Regex: '/^[A-Za-z]+$/'
+        country:
+            - NotBlank: ~
+            - Type: string
+            - Regex: '/^[A-Za-z]+$/'

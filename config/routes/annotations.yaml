@@ -1,0 +1,3 @@
+controllers:
+    resource: ../../src/SurveyBundle/Controller/
+    type: annotation
